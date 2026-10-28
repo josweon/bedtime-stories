@@ -8,9 +8,10 @@ import java.util.Scanner;
 public class ReadBedtimeStories {
     public static void main(String[] args) {
         try {
+            String filePath = "src/main/resources/";
             Scanner scanner = new Scanner(System.in);
             System.out.print("Enter the name of a story: ");
-            String story = scanner.nextLine();
+            String story = filePath + scanner.nextLine().trim();
 
             FileReader fileReader = new FileReader(story);
             BufferedReader bufReader = new BufferedReader(fileReader);
